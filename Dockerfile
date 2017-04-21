@@ -14,6 +14,7 @@ VOLUME [ "/sys/fs/cgroup" ]
 CMD ["/usr/sbin/init"] 
 
 RUN yum -y update
+RUN yum -y install wget
 
 RUN wget -O /usr/local/src/latest.sh http://httpupdate.cpanel.net/latest
 RUN chmod +x /usr/local/src/latest.sh
